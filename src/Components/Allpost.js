@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import Profile from './Profile';
 import comment from './comment.png';
+import Moment from 'react-moment';
 import slashcomment from './slashcomment.png';
 import heart from './heart.png';
 import Editpost from './Editpost';
@@ -249,7 +250,7 @@ export default function Allpost() {
      <div>
         <div className="d-flex-xl-column align-items-center justify-content-center" id="allpostone" style={{ position: 'relative',marginTop:'15%'}}>
             <div class="d-flex aligns-items-center justify-content-between " style={{marginBottom:'2%'}}>
-                <div class="d-flex" style={{width:'70%'}}>
+                <div class="d-flex" style={{width:'100%',marginLeft:'1vw'}}>
             <img src={state.userpic} className="card-img-top rounded-circle" alt="..." style={{width:'8.5vw',height:'8vw',margin:'1%',borderRadius: '50%',border: '2.5px solid transparent',backgroundImage: 'linear-gradient(to right, #ff8a00, #e52e71, #ff8a00)'}}></img>
             
             <h5 id="allpostusername" style={{fontWeight:'bold'}}>{state.username}</h5>
@@ -290,7 +291,7 @@ export default function Allpost() {
               
          
           <img src={element.ImageURL} id="allpostphoto" style={{width:'100%',objectFit:'fill',cursor:'pointer'}} alt="..." className="card-img-top"  />
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width:'100%', marginTop: '5px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width:'100%', marginTop: '5px',marginLeft:'7px' }}>
           <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer',width:'10%' }} onClick={() => handleLike(element._id)}>
   {/* Content */}
 
@@ -352,7 +353,7 @@ export default function Allpost() {
    
 )}
 
-    <div  style={{ color: 'grey', height: 'auto', marginBottom: '2vw' }}>
+    <div  style={{ color: 'grey', height: 'auto', marginBottom: '2vw',marginLeft:'7px' }}>
     <p style={{fontWeight:'bold',color:'white'}}>{state.username} :</p>
       <p style={{ height: expanded ? 'auto' : '1.75em', overflow: 'hidden' }}>{element.body}</p>
       {element.body.length > 80 && (
@@ -361,7 +362,9 @@ export default function Allpost() {
         </button>
       )}
     </div>
-       
+    <div style={{marginLeft:'7px'}}>
+   <Moment  to={element.updatedAt}>{new Date()+ ""}</Moment>
+   </div>
       </div> 
       </div>
       
@@ -374,5 +377,8 @@ export default function Allpost() {
 
   )
 }
+
+
+
 
 
