@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import Profile from './Profile';
+import Moment from 'react-moment';
 import comment from './comment.png';
 import slashcomment from './slashcomment.png';
 import heart from './heart.png';
@@ -287,7 +288,7 @@ export default function Savedpost() {
   {element!==null &&  (<div className="d-flex-xl-column align-items-center justify-content-center" id="savedpostone" style={{ position: 'relative',marginTop:'15%'}}>
             <div class="d-flex aligns-items-center " style={{marginBottom:'2%'}}>
             {Users.map((ele,index)=> 
-           <div>{element.owner===ele._id &&(<div class="d-flex" style={{width:'70%'}}>
+           <div>{element.owner===ele._id &&(<div class="d-flex" style={{width:'100%',marginLeft:'1vw'}}>
             
      <img src={element.owner===ele._id?ele.Photo:null} className="card-img-top rounded-circle" alt="..." id="saveddp" style={{margin:'1%',borderRadius: '50%',border: '2.5px solid transparent',backgroundImage: 'linear-gradient(to right, #ff8a00, #e52e71, #ff8a00)'}}></img>
      <div class="d-flex align-items-center">
@@ -305,7 +306,7 @@ export default function Savedpost() {
             
          
           <img src={element.ImageURL} id="savedphoto" style={{width:'100%',objectFit:'fill',cursor:'pointer',borderWidth:'5px'}} alt="..." className="card-img-top"  />
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width:'100%', marginTop: '5px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width:'100%', marginTop: '5px',marginLeft:'7px' }}>
           <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer',width:'10%' }} onClick={() => handleLike(element._id)}>
   {/* Content */}
 
@@ -364,7 +365,7 @@ export default function Savedpost() {
    
 )}
 
-    <div  style={{ color: 'grey', height: 'auto', marginBottom: '2vw' }}>
+    <div  style={{ color: 'grey', height: 'auto', marginBottom: '2vw',marginLeft:'7px' }}>
       <p style={{ height: expanded ? 'auto' : '1.75em', overflow: 'hidden' }}>{element.body}</p>
       {element.body.length > 80 && (
         <button onClick={toggleExpansion} style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'grey' }}>
@@ -372,6 +373,9 @@ export default function Savedpost() {
         </button>
       )}
     </div>
+    <div style={{marginLeft:'7px'}}>
+   <Moment  to={element.updatedAt}>{new Date()+ ""}</Moment>
+   </div>
        
       </div>)} 
       </div>
@@ -385,5 +389,8 @@ export default function Savedpost() {
     
   )
 }
+
+
+
 
 
