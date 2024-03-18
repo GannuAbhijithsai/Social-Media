@@ -62,23 +62,31 @@ export default function Editpost() {
      </nav>
  
 </div>
-<h1 style={{fontWeight:'bold',marginLeft:'41%'}}>Edit a Post</h1>
-<div className="container" style={{marginLeft:'28%'}}>
-<div style={{width: "25rem",height:"20rem",border:'none',marginLeft:'20px',marginTop:'20px',marginBottom:'30px'}}>
-<img src={userpic===""?state.postpic:userpic} alt="..." style={{width: "25rem",height:"20rem",border:'none',marginLeft:'20px',marginTop:'20px'}}/>
+<h1 style={{fontWeight:'bold',width:'100vw'}} class="text-center">Edit a Post</h1>
+<div className="d-flex flex-column align-items-center">
+<div style={{width: "55vw",height:"40vw",border:'none',marginTop:'20px',marginBottom:'30px'}}>
+<img src={userpic===""?state.postpic:userpic} alt="..." style={{width: "55vw",height:"40vw",border:'none',marginTop:'20px'}}/>
 
 </div>
+<div class="text-center" style={{width:'100vw'}}>
     <input type="file" accept="image/*" onChange={event=>onFileChange(event.target.files[0])} />
     </div>
-    <div class="conatiner" style={{marginLeft:'28%',width:'35rem'}}>
+    </div>
+    <div className="d-flex flex-column align-items-center" style={{width:'100vw'}}>
+    <div>
   <label for="exampleFormControlTextarea1" class="form-label" style={{margin:'10px'}}><h3>Edit the Caption for your post</h3></label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style={{borderWidth:'3px',borderColor:'black'}} onChange={event=>setbody(event.target.value)}></textarea>
+  </div>
+  <div class="d-flex align-items-center justify-content-around" style={{width:'100vw'}}>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style={{borderWidth:'3px',borderColor:'black',width:'80vw'}} onChange={event=>setbody(event.target.value)}></textarea>
+  </div>
 </div>
-<div className="container" style={{marginLeft:'41%',marginTop:'2%'}}>
+<div className="d-flex align-items-center justify-content-around" style={{marginTop:'2%',width:'100vw'}}>
 <button class="btn btn-primary" type="button" onClick={onhandle}>Save your Changes</button>
 </div>
 
     </div>
   )
 }
+
+
 
