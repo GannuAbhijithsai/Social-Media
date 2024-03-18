@@ -1,0 +1,182 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+body {
+  background-color: black;
+  color: white;
+}
+/* Example media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  #postone{
+    width:100vw;
+    height:auto;
+  }
+  #postdp{
+    width:24vw;
+    height:10vw;
+  }
+  #postphoto{
+    max-height:80vw;
+  }
+  #homesave{
+    height:6vw;
+  }
+  #homeunsave{
+    height:6vw;
+  }
+  #homecomment{
+    height:7vw;
+  }
+  #allpostcomment{
+    height:7vw;
+  }
+  #allpostone{
+    width:100vw;
+    height:auto;
+  }
+  #allpostphoto{
+    max-height:80vw;
+  }
+  #savedpostone{
+    width:100vw;
+    height:auto;
+  }
+  #savedsave{
+    height:6vw;
+  }
+  #savedunsave{
+    height:6vw;
+  }
+  #savedphoto{
+    max-height:80vw;
+  }
+  #savedcomment{
+    height:7vw;
+  }
+  #saveddp{
+    width:24vw;
+    height:10vw;
+  }
+  #footbar{
+    height:12vw;
+  }
+  #footbarhome{
+    height:8vw;
+  }
+  #footbarprofile{
+    height:8vw;
+  }
+  #allpostusername{
+    margin-top:1.5%;
+  }
+  #allpostmore{
+    top:20;
+  }
+  /* Mobile styles here */
+}
+
+/* Example media query for desktop devices */
+@media only screen and (min-width: 601px) {
+  /* Desktop styles here */
+  #postone{
+    width:60vw;
+    height:auto;
+    margin-left:20vw
+  }
+  #postdp{
+    width:11vw;
+    height:5vw;
+  }
+  #postphoto{
+    max-height:55vw;
+  }
+  #homesave{
+    height:3vw;
+  }
+  #homeunsave{
+    height:3vw;
+  }
+  #homecomment{
+    height:3vw;
+  }
+  #allpostcomment{
+    height:3vw;
+  }
+  #allpostone{
+    width:60vw;
+    height:auto;
+    margin-left:20vw
+  }
+  #allpostphoto{
+    max-height:55vw;
+  }
+  #savedpostone{
+    width:60vw;
+    height:auto;
+    margin-left:20vw
+  }
+  #savedsave{
+    height:3vw;
+  }
+  #savedunsave{
+    height:3vw;
+  }
+  #savedphoto{
+    max-height:55vw;
+  }
+  #savedcomment{
+    height:3vw;
+  }
+  #saveddp{
+    width:11vw;
+    height:5vw;
+  }
+  #footbar{
+    height:6vw;
+  }
+  #footbarhome{
+    height:4vw;
+  }
+  #footbarprofile{
+    height:4vw;
+  }
+  #allpostusername{
+    margin-top:6.5%;
+  }
+  #allpostmore{
+    top:45;
+  }
+}
+
+
