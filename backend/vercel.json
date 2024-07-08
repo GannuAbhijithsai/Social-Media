@@ -1,0 +1,26 @@
+{
+<<<<<<< HEAD
+   "version": 2,
+   "name": "Authentication",
+   "builds": [
+     { "src": "*.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+     { "src": "/(.*)", "dest": "/" }
+   ],
+   "static": {
+      "glob": "*.{html,css,js,json}"
+    }
+ }
+ 
+=======
+    "version": 2,
+    "name": "Authentication",
+    "builds": [
+       { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/" }
+    ]
+ }
+>>>>>>> e2c2ae5662fafe10504657f1fcfc402125d6a8b0
